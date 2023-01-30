@@ -6,7 +6,6 @@ This is a solution to the **\_\_\_** project of the Make It Real course.
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
