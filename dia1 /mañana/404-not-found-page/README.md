@@ -1,60 +1,53 @@
-# Make It Real - 404 Not Found Page
+# Make It Real - NAME OF THE PROJECT
 
-<img src="./design/desktop-preview.jpg" width="700">
+This is a solution to the **\_\_\_** project of the Make It Real course.
 
-## Reto
+## Table of contents
 
-Su desafío es construir una pagina 404 responsive y lograr que se parezca lo más posible al diseño.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-Puedes usar cualquier herramienta que te guste para ayudarte a completar el desafío. Entonces, si tienes algo que te gustaría practicar, no dudes en intentarlo.
+## Overview
 
-Sus usuarios deberían poder:
+### The challenge
 
-- Ver el diseño óptimo según el tamaño de pantalla de su dispositivo
+Users should be able to:
 
-## Diseño
+- see the application in 375px for mobile screens
+- see the application from 375px and beyond on desktop mode
 
-Los diseños están en formato JPG estático. El uso de archivos JPG significará que deberá usar su mejor criterio para estilos como "tamaño de fuente", "padding" y "margen".
+## My process
 
-### Style Guide
+### Built with
 
-Los diseños se crearon con los siguientes anchos:
+- Semantic HTML5 markup
+- CSS
+- Flexbox
+- Mobile-first workflow
 
-- Mobile: 375px
-- Desktop: 1440px
+### What I learned
 
-## Colores
+How to implement adaptable resolutions for a simple 404 message. it was specially important to take
+into cosideration how the code Will change according to the current size of the screen
 
-### Primary
+### Continued development
 
-- Black: #333333
-- Gray2: #4F4F4F
+We need to improve the implementation of different sizes for the containers and text depending on
+the resolution and keep learning about clamp property
 
-## Tipografía
+### Useful resources
 
-### Body Copy
+- [FlexBox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flexbox-properties) - Useful
+  to learn about Flexbox
 
-- Font size: 24px/18px
+## Author
 
-### Font
-
-- Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
-- Weights: 500
-
-## Construyendo tu proyecto
-
-Siéntase libre de usar cualquier flujo de trabajo con el que se sienta cómodo. A continuación se sugiere un proceso, pero no sienta que necesita seguir estos pasos:
-
-1. Inicializa tu proyecto como repositorio público en [GitHub](https://github.com/). La creación de un repositorio hará que sea más fácil compartir su código con la comunidad si necesita ayuda. Si no está seguro de cómo hacer esto, [lea este recurso](https://guias.makeitreal.camp/git) .
-2. Mire los diseños para comenzar a planificar cómo abordará el proyecto. Este paso es crucial para ayudarlo a pensar con anticipación en las clases de CSS para crear estilos reutilizables.
-3. Antes de agregar estilos, estructura tu contenido con HTML. Escribir tu HTML primero puede ayudar a centrar tu atención en crear contenido bien estructurado.
-4. Escriba los estilos base para su proyecto, incluidos los estilos de contenido general, como `font-family` y `font-size`.
-5. Comience a agregar estilos en la parte superior de la página y siga hacia abajo. Pase a la siguiente sección solo cuando esté satisfecho de haber completado el área en la que está trabajando.
-
-## Crea un `README.md` personalizado
-
-Recomendamos encarecidamente sobrescribir este `README.md` con uno personalizado. Proporcionamos una plantilla dentro del archivo [`README-template.md`](./README-template.md) en este código de inicio.
-
-La plantilla proporciona una guía sobre qué agregar. Un `README` personalizado lo ayudará a explicar su proyecto y reflexionar sobre sus aprendizajes. Por favor, siéntete libre de editar nuestra plantilla tanto como quieras.
-
-**¡Diviértete construyendo!** 🚀
+- Jean Carlo Vittory Jiménez Laguna <br>
+- Andrés Velez

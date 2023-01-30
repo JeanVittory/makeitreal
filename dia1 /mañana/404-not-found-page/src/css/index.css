@@ -101,6 +101,10 @@ body {
 
 	.general-container {
 		max-width: 600px;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		margin: 0 auto;
 	}
 	.lg-header {
@@ -110,7 +114,6 @@ body {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
-		margin-top: 6rem;
 	}
 
 	.lg-container {
