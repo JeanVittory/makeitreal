@@ -1,0 +1,167 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	padding: 1.5rem;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.regular {
+	font-weight: 400;
+}
+
+.space {
+	font-family: 'Space Mono', monospace;
+}
+
+.font-sm {
+	font-size: 16px;
+}
+
+.font-md {
+	font-size: 36px;
+}
+
+.primary-black {
+	color: #333333;
+}
+
+.primary-gray2 {
+	color: #4f4f4f;
+}
+
+.imagen {
+	width: 80%;
+}
+
+.bg-primary-black {
+	background-color: #333333;
+}
+
+.bg-primary-gray2 {
+	background-color: #4f4f4f;
+}
+
+.color-white {
+	color: aliceblue;
+}
+
+.button-padding {
+	padding: 1rem 1.5rem;
+}
+
+.button-margin {
+	margin-bottom: 6rem;
+}
+
+.border {
+	border: none;
+}
+
+.img-container {
+	padding: 1rem;
+	margin: 2rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.h2-margin {
+	margin-bottom: 2rem;
+}
+
+.p-margin {
+	margin-bottom: 4rem;
+}
+
+.footer {
+	text-align: center;
+	font-size: 12px;
+	color: #949494;
+}
+
+.username-footer {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+@media screen and (min-width: 375px) {
+	body {
+		padding: 1rem;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.general-container {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	.lg-header {
+		font-size: 0.8rem;
+	}
+	.container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		margin-top: 6rem;
+	}
+
+	.lg-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.img-container {
+		padding: 0;
+		margin: 0;
+		align-self: flex-start;
+	}
+
+	.imagen {
+		min-width: 200px;
+	}
+
+	.lg-font-h2 {
+		font-size: clamp(0.5rem, 2vw + 0.75rem, 1.5rem);
+	}
+
+	.lg-h2-margin {
+		margin-bottom: 1rem;
+	}
+
+	.lg-font-p {
+		font-size: clamp(0.4rem, 1vw + 0.3rem, 0.8rem);
+	}
+
+	.lg-p-margin {
+		margin-bottom: 1rem;
+	}
+
+	.lg-p-container {
+		max-width: 200px;
+	}
+
+	.button-margin {
+		margin-bottom: 0;
+	}
+	.button-padding {
+		padding: 0.8rem 1rem;
+	}
+	.lg-font-button {
+		font-size: 0.5rem;
+	}
+
+	.footer-container {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+	}
+}
