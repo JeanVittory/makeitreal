@@ -24,7 +24,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+#### Desktop
+
+![](./screenshots/desktop.png)
+
+#### Mobile
+
+![](./screenshots/mobile.png)
 
 ## My process
 
