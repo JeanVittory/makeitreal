@@ -1,6 +1,6 @@
-# Make It Real - NAME OF THE PROJECT
+# Make It Real - QR
 
-This is a solution to the **\_\_\_** project of the Make It Real course.
+This is a solution to the QR landing project of the Make It Real course.
 
 ## Table of contents
 
