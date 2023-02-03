@@ -1,65 +1,79 @@
-# Make It Real - Single price grid component
+# Single Price Grid Component
 
-<img src="./design/desktop-preview.jpg" width="700">
+Esta es una solución al proyecto **Single Price Grid Component** del curso Make It Real.
 
-## Reto
+## Tabla de contenido
 
-Su desafío es desarrollar este componente de precios y lograr que se parezca lo más posible al diseño.
+- [Single Price Grid Component](#single-price-grid-component)
+  - [Tabla de contenido](#tabla-de-contenido)
+  - [Resumen](#resumen)
+    - [El reto](#el-reto)
+    - [Captura de pantalla](#captura-de-pantalla)
+  - [Mi proceso](#mi-proceso)
+    - [Construido con](#construido-con)
+    - [Lo que aprendí](#lo-que-aprendí)
+    - [Desarrollo continuo](#desarrollo-continuo)
+    - [Recursos útiles](#recursos-útiles)
+  - [Autor](#autor)
 
-Puedes usar cualquier herramienta que te guste para ayudarte a completar el desafío. Entonces, si tienes algo que te gustaría practicar, no dudes en intentarlo.
+## Resumen
 
-Tus usuarios deberían poder:
+El reto consiste en generar, mediante HTML y CSS, una pagina que muestre una tarjeta con 3
+divisiones, en cada division se debe mostrar un texto explicativo, ademas, en la segunda division
+debe existir un botón de registro.
 
-- Ver el diseño óptimo para el componente según el tamaño de pantalla de su dispositivo
+### El reto
 
-## Diseño
+Los usuarios deben ser capaces de:
 
-Los diseños están en formato JPG estático. El uso de archivos JPG significará que deberá usar su mejor criterio para estilos como "tamaño de fuente", "padding" y "margen".
+- visualizar el componente anteriormente descrito, este componente debe ser responsivo, generando
+  una visualización móvil para dispositivos cuyo ancho sea inferior a 375 pixeles y otra
+  visualización para dispositivos con pantallas mas grandes
 
-### Style Guide
+### Captura de pantalla
 
-Los diseños se crearon con los siguientes anchos:
+Dispositivo móvil
 
-- Mobile: 375px
-- Desktop: 1440px
+![](./screenshots/mobile.png)
 
-## Colores
+Dispositivo de escritorio
 
-### Primary
+![](./screenshots/desktop.png)
 
-- Cyan: hsl(179, 62%, 43%)
-- Bright Yellow: hsl(71, 73%, 54%)
+## Mi proceso
 
-### Neutral
+- Identificar los diferentes contenedores de elementos HTML
+- generar la estructura de la pagina con HTML haciendo énfasis en el contenido que debe tener cada
+  contenedor
+- crear la hoja de estilos CSS y usando la herramienta FlexBox generar los estilos correspondientes
+  para dispositivos de hasta 375 pixeles de ancho
+- crear una MediaQuery que modifique los estilos creados anteriormente para generar el contenido de
+  un dispositivo de escritorio
 
-- Light Gray: hsl(204, 43%, 93%)
-- Grayish Blue: hsl(218, 22%, 67%)
+### Construido con
 
-## Tipografía
+- Marcado HTML5
+- Propiedades personalizadas de CSS
+- FlexBox
+- Flujo de trabajo móvil primero
 
-### Body Copy
+### Lo que aprendí
 
-- Font size: 16px
+En este reto aprendimos a utilizar algunas propiedades del modulo de flexBox para posicionar
+elementos de forma sencilla.
 
-### Font
+### Desarrollo continuo
 
-- Family: [Karla](https://fonts.google.com/specimen/Karla)
-- Weights: 400, 700
+Es de gran importancia seguir profundizando en en la metodologia de trabajo BEM
 
-## Construyendo tu proyecto
+### Recursos útiles
 
-Siéntase libre de usar cualquier flujo de trabajo con el que se sienta cómodo. A continuación se sugiere un proceso, pero no sienta que necesita seguir estos pasos:
+- [ CSS-TRICKS ](https://css-tricks.com/snippets/css/a-guide-to-flexbox/): Este recurso nos mostró
+  como utilizar de forma correcta las propiedades de FlexBox vistas anteriormente.
+- [ANIMATICSS](https://animaticss.com/articulo/que-es-bem-css/): Este recurso muestra en que
+  consiste la metodología BEM
 
-1. Inicializa tu proyecto como repositorio público en [GitHub](https://github.com/). La creación de un repositorio hará que sea más fácil compartir su código con la comunidad si necesita ayuda. Si no está seguro de cómo hacer esto, [lea este recurso](https://guias.makeitreal.camp/git) .
-2. Mire los diseños para comenzar a planificar cómo abordará el proyecto. Este paso es crucial para ayudarlo a pensar con anticipación en las clases de CSS para crear estilos reutilizables.
-3. Antes de agregar estilos, estructura tu contenido con HTML. Escribir tu HTML primero puede ayudar a centrar tu atención en crear contenido bien estructurado.
-4. Escriba los estilos base para su proyecto, incluidos los estilos de contenido general, como `font-family` y `font-size`.
-5. Comience a agregar estilos en la parte superior de la página y siga hacia abajo. Pase a la siguiente sección solo cuando esté satisfecho de haber completado el área en la que está trabajando.
+## Autor
 
-## Crea un `README.md` personalizado
-
-Recomendamos encarecidamente sobrescribir este `README.md` con uno personalizado. Proporcionamos una plantilla dentro del archivo [`README-template.md`](./README-template.md) en este código de inicio.
-
-La plantilla proporciona una guía sobre qué agregar. Un `README` personalizado lo ayudará a explicar su proyecto y reflexionar sobre sus aprendizajes. Por favor, siéntete libre de editar nuestra plantilla tanto como quieras.
-
-**¡Diviértete construyendo!** 🚀
+- Adrian Camilo Gil
+- Jean Vittory

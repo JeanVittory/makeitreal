@@ -4,17 +4,19 @@
 
 console.log('********* ejercicio 1 *********');
 
-const searchingValueObj = (obj) => {
-	if (!obj.a) return undefined;
-	if (!obj.a?.b) return undefined;
+const deppObj = (obj) => {
+	let key = 'b';
 
-	return obj.a.b;
+	if (obj.hasOwnProperty(key)) return obj[key];
+	for (let i in obj) {
+		return obj.hasOwnProperty(i) && deppObj(obj[i], key) ? deppObj(obj[i], key) : undefined;
+	}
 };
 
-console.log(searchingValueObj({ a: 1 })); // undefined
-console.log(searchingValueObj({ a: { b: { c: 3 } } })); // 	{c:3}
-console.log(searchingValueObj({ b: { a: 1 } })); // undefined
-console.log(searchingValueObj({ a: { b: 2 } })); // 2
+console.log(deppObj({ a: 1 })); // undefined
+console.log(deppObj({ a: { b: { c: 3 } } })); // 	{c:3}
+console.log(deppObj({ b: { a: 1 } })); // undefined
+console.log(deppObj({ a: { b: 2 } })); // 2
 
 // 2. Fix Error: manipulación de arreglos
 // ¡Ayuda a corregir todos los errores en la función incrementItems! ¡Está destinado a agregar 1 a cada elemento en el arreglo!
