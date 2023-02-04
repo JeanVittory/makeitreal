@@ -7,17 +7,12 @@ console.log('********* ejercicio 1 *********');
 const deepObject = (obj) => {
 	if (!Object.keys(obj).length) return undefined;
 	const checker = (obj) => {
-		let key = 'a';
-		if (obj[key] && obj[key].b) {
-			return obj[key].b;
-		}
+		const key = 'a';
+		if (obj[key] && obj[key].b) return obj[key].b;
 		for (let i in obj) {
 			if (!(obj[i] instanceof Object)) continue;
-			if (checker(obj[i])) {
-				return checker(obj[i]);
-			} else {
-				continue;
-			}
+			if (checker(obj[i])) return checker(obj[i]);
+			continue;
 		}
 	};
 	const result = checker(obj);
