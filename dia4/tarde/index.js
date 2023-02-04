@@ -15,8 +15,7 @@ const deepObject = (obj) => {
 			continue;
 		}
 	};
-	const result = checker(obj);
-	return result;
+	return checker(obj);
 };
 
 console.log(deepObject({ d: 3, f: { r: { t: 3 }, u: { p: 8, a: { b: { c: 3 } } } } })); // {c:3}
