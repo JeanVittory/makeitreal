@@ -6,15 +6,17 @@ console.log('********* ejercicio 1 *********');
 
 const deepObject = (obj) => {
 	if (!Object.keys(obj).length) return undefined;
-	if (obj.b) return undefined;
 	const checker = (obj) => {
-		let key = 'b';
-		if (obj.hasOwnProperty(key)) return obj[key];
+		let key = 'a';
+		if (obj[key] && obj[key].b) {
+			return obj[key].b;
+		}
 		for (let i in obj) {
+			if (!(obj[i] instanceof Object)) continue;
 			if (checker(obj[i])) {
 				return checker(obj[i]);
 			} else {
-				return undefined;
+				continue;
 			}
 		}
 	};
@@ -22,6 +24,9 @@ const deepObject = (obj) => {
 	return result;
 };
 
+console.log(deepObject({ d: 3, f: { r: { t: 3 }, u: { p: 8, a: { b: { c: 3 } } } } })); // {c:3}
+console.log(deepObject({ d: { h: { r: { f: { b: 1 } } } } })); // undefined
+console.log(deepObject({})); // undefined
 console.log(deepObject({ a: 1 })); // undefined
 console.log(deepObject({ a: { b: { c: 3 } } })); // 	{c:3}
 console.log(deepObject({ b: { a: 1 } })); // undefined
@@ -69,3 +74,5 @@ console.log(checkEquals([1, 2], [1, 2])); // true
 console.log(checkEquals([4, 5, 6], [4, 5, 6])); //true
 console.log(checkEquals([4, 7, 6], [4, 5, 6])); // false
 console.log(checkEquals([4, 7, 6], [4, 6, 7])); // false
+
+console.log('************** Final ******************');
