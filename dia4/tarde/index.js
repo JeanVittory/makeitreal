@@ -4,19 +4,28 @@
 
 console.log('********* ejercicio 1 *********');
 
-const deppObj = (obj) => {
-	let key = 'b';
-
-	if (obj.hasOwnProperty(key)) return obj[key];
-	for (let i in obj) {
-		return obj.hasOwnProperty(i) && deppObj(obj[i], key) ? deppObj(obj[i], key) : undefined;
-	}
+const deepObject = (obj) => {
+	if (!Object.keys(obj).length) return undefined;
+	if (obj.b) return undefined;
+	const checker = (obj) => {
+		let key = 'b';
+		if (obj.hasOwnProperty(key)) return obj[key];
+		for (let i in obj) {
+			if (checker(obj[i])) {
+				return checker(obj[i]);
+			} else {
+				return undefined;
+			}
+		}
+	};
+	const result = checker(obj);
+	return result;
 };
 
-console.log(deppObj({ a: 1 })); // undefined
-console.log(deppObj({ a: { b: { c: 3 } } })); // 	{c:3}
-console.log(deppObj({ b: { a: 1 } })); // undefined
-console.log(deppObj({ a: { b: 2 } })); // 2
+console.log(deepObject({ a: 1 })); // undefined
+console.log(deepObject({ a: { b: { c: 3 } } })); // 	{c:3}
+console.log(deepObject({ b: { a: 1 } })); // undefined
+console.log(deepObject({ a: { b: 2 } })); // 2
 
 // 2. Fix Error: manipulación de arreglos
 // ¡Ayuda a corregir todos los errores en la función incrementItems! ¡Está destinado a agregar 1 a cada elemento en el arreglo!
