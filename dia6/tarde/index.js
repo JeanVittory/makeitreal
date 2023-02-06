@@ -1,5 +1,13 @@
+// @ts-check
+
 // 1. Sumar valores de objeto
 // Escribir una función que tome un objeto como argumento. Devuelve la suma de todos los valores de las propiedades del objeto.
+
+/**
+ *
+ * @param {{[index: string]: number}} obj
+ * @returns {number | string}
+ */
 
 const sumValues = (obj) => {
 	if (!(typeof obj === 'object')) return 'the param should be an object';
@@ -17,13 +25,19 @@ console.log(sumValues({ w: 15, x: 22, y: 13 })); //50
 // De ahí en adelante cada número se calcula con la suma de los dos anteriores.
 // Escribe una función recurrente que calcule el número n de la secuencia (basado en 0). Por ejemplo:
 
+/**
+ *
+ * @param {number} num
+ * @returns {number}
+ */
+
 const fib = (num) => {
 	if (num === 0 || num === 1) return 1;
 	return fib(num - 1) + fib(num - 2);
 };
 
 console.log('---------fibonacci----------');
-console.log(fib(0));
+console.log(fib(1));
 console.log(fib(1));
 console.log(fib(4));
 console.log(fib(5));
