@@ -1,0 +1,25 @@
+@import './variables.css';
+
+* {
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--font-overpass);
+}
+
+h1,
+h2,
+h3,
+p,
+span {
+	color: var(--neutral-white);
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--neutral-very-dark-blue);
+}

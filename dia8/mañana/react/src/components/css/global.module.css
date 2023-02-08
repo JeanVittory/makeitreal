@@ -1,0 +1,9 @@
+@import '../../variables.css';
+
+.card {
+	background-color: var(--neutral-dark-blue);
+	margin: 0 1rem;
+	padding: 1rem;
+	border-radius: 15px;
+	max-width: 319px;
+}
