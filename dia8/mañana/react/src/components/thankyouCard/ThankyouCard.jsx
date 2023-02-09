@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import headerImage from '../../assets/illustration-thank-you.svg';
 import { useRateContext } from '../../context/rateContext';
 import css from './thankyou.module.css';

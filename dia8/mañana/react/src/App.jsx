@@ -2,6 +2,8 @@ import { RateCard } from './components/rateCard/RateCard';
 import { ThankyouCard } from './components/thankyouCard/ThankyouCard';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ContextProvider } from './context/rateContext';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
 function App() {
@@ -16,10 +18,9 @@ function App() {
 					</Routes>
 				</BrowserRouter>
 			</ContextProvider>
+			<ToastContainer />
 		</>
 	);
 }
 
 export default App;
-
-SPA;

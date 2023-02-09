@@ -2,18 +2,34 @@ import star from '../../assets/icon-star.svg';
 import css from './rateCard.module.css';
 import { Link } from 'react-router-dom';
 import { useRateContext } from '../../context/rateContext';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 export const RateCard = () => {
-	const [selectionUser, setSelectionUser] = useState('');
-	const { setQualification } = useRateContext();
+	// const [selectionUser, setSelectionUser] = useState(0);
+	const { qualification, setQualification } = useRateContext();
+	const qualifications = [1, 2, 3, 4, 5];
+	const navigate = useNavigate();
 
 	const handleSelectionUser = (e) => {
-		setSelectionUser(e.target.firstChild.nodeValue);
+		setQualification(+e.target.firstChild.nodeValue);
 	};
 
-	const handleSubmit = () => {
-		setQualification(selectionUser);
+	useEffect(() => {
+		setQualification(0);
+		const resetSelectionUser = () => setQualification(0);
+		window.addEventListener('click', (e) => {
+			if (e.target.nodeName !== 'A') resetSelectionUser();
+		});
+		return () => window.removeEventListener('click', resetSelectionUser);
+	}, []);
+
+	const handleSubmit = (e) => {
+		if (!qualification) {
+			return toast.error('You should select a rate');
+		}
+		navigate('thank-you');
 	};
 
 	return (
@@ -30,27 +46,22 @@ export const RateCard = () => {
 					improve our offering!
 				</p>
 			</section>
-			<section className={css.containerQualification}>
-				<div tabIndex={'0'} className={css.containerQualification__item} onClick={handleSelectionUser}>
-					<div className={css.item}>1</div>
-				</div>
-				<div tabIndex={'0'} className={css.containerQualification__item} onClick={handleSelectionUser}>
-					<div className={css.item}>2</div>
-				</div>
-				<div tabIndex={'0'} className={css.containerQualification__item} onClick={handleSelectionUser}>
-					<div className={css.item}>3</div>
-				</div>
-				<div tabIndex={'0'} className={css.containerQualification__item} onClick={handleSelectionUser}>
-					<div className={css.item}>4</div>
-				</div>
-				<div tabIndex={'0'} className={css.containerQualification__item} onClick={handleSelectionUser}>
-					<div className={css.item}>5</div>
-				</div>
-			</section>
+			<ul className={css.containerQualification}>
+				{qualifications.map((item) => {
+					return (
+						<li
+							key={item}
+							tabIndex={'0'}
+							className={css.containerQualification__item}
+							onClick={handleSelectionUser}
+						>
+							<a className={css.item}>{item}</a>
+						</li>
+					);
+				})}
+			</ul>
 			<div className={css.submit} onClick={handleSubmit}>
-				<Link to={'/thank-you'} className={css.link}>
-					SUBMIT
-				</Link>
+				<Link className={css.link}>SUBMIT</Link>
 			</div>
 		</main>
 	);
