@@ -1,0 +1,33 @@
+:root {
+	--primary-pale-blue: hsl(225, 100%, 94%);
+	--primary-bright-blue: hsl(245, 75%, 52%);
+	--neutral-very-pale-blue: hsl(225, 100%, 98%);
+	--neutral-desaturated-blue: hsl(224, 23%, 55%);
+	--neutral-dark-blue: hsl(223, 47%, 23%);
+	--font-red-hat: 'Red Hat Display', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	padding: 0 2rem;
+	font-family: var(--font-red-hat);
+	background-color: var(--primary-pale-blue);
+	background-image: url('./assets/pattern-background-mobile.svg');
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (min-width: 375px) {
+	body {
+		background-image: url('./assets/pattern-background-desktop.svg');
+	}
+}
