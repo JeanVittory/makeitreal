@@ -16,10 +16,11 @@
 body {
 	width: 100vw;
 	height: 100vh;
-	padding: 0 2rem;
 	font-family: var(--font-red-hat);
 	background-color: var(--primary-pale-blue);
 	background-image: url('./assets/pattern-background-mobile.svg');
+	background-position: top center;
+	background-size: 100vw 40%;
 	background-repeat: no-repeat;
 	display: flex;
 	justify-content: center;
@@ -28,6 +29,8 @@ body {
 
 @media screen and (min-width: 375px) {
 	body {
-		background-image: url('./assets/pattern-background-desktop.svg');
+		background: url('./assets/pattern-background-desktop.svg') no-repeat top center;
+		background-size: contain;
+		background-color: var(--primary-pale-blue);
 	}
 }

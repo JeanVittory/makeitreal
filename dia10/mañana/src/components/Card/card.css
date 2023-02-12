@@ -1,5 +1,14 @@
 @import '../../App.css';
 
+.container {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .card {
 	max-width: 352px;
 	background-color: rgb(255, 255, 255);
