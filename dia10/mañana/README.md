@@ -10,6 +10,7 @@ This is a solution to the Order Summary Card project of the Make It Real course.
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+- [Start Project](#start-project)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -47,6 +48,15 @@ Users should be able to:
 
 How to implement BEM in a react comoponent, import classes in a component and keep practicing
 layouts building techniques
+
+## Start Project
+
+We recommend use Node +16 to run the vite builder without issues.
+
+```sh
+  pnpm i
+  pnpm run dev
+```
 
 ## Author
 
