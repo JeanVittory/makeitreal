@@ -2,9 +2,9 @@ import { faker } from '@faker-js/faker';
 
 export const namesGenerator = (num) => {
 	const names = [];
-	for (let i = 1; i <= num; i++) {
+	Array.from({ length: num }).forEach(() => {
 		names.push(faker.name.fullName() + '\n');
-	}
+	});
 
 	return names;
 };
