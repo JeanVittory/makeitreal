@@ -1,10 +1,9 @@
 import { writeFile } from 'fs';
 import { namesGenerator } from './faker/index.js';
 
-const names = JSON.stringify(namesGenerator(1000), null, 1);
-const formatedNames = names.replace(/["[]]/g, '');
+const names = namesGenerator(1000);
 
-writeFile('./test.txt', formatedNames, (error) => {
+writeFile('./test.txt', names.toString().replace(/[,]/g, ''), (error) => {
 	if (error) console.log(error);
 });
 
